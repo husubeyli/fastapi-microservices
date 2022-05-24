@@ -1,4 +1,5 @@
 
+import os
 import time
 import requests
 from fastapi import FastAPI
@@ -18,9 +19,9 @@ app.add_middleware(
 
 # the should be different databse
 redis = get_redis_connection(
-    host='redis-11664.c300.eu-central-1-1.ec2.cloud.redislabs.com',
-    port=11664,
-    password='EsqeOdnYfA1AfLpZrMWuxjlPIUxRxdEW',
+    host=os.getenv('REDIS_HOST'),
+    port=os.getenv('REDIS_PORT'),
+    password=os.getenv('REDIS_PASSWORD'),
     decode_responses=True,
 )
 
