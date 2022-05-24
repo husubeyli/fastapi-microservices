@@ -3,7 +3,7 @@
 # install virtualenv
 python3 -m venv .venv
 
-#activate virtualenv
+# activate virtualenv
 source /.venv/bin/activate
 
 # run fastapi app
